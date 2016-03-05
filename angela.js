@@ -7,7 +7,7 @@ jq.onload = procede;
 function procede() {
 
 
-$("#name").hover(
+$(".title").hover(
     function() {//mouse in
         var rand = Math.floor(Math.random()*16777215).toString(16);
         $(this).css("color", '#' + rand);
