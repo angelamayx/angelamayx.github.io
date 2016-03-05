@@ -9,7 +9,8 @@ function procede() {
 
 $("#name").hover(
     function() {//mouse in
-         $(this).css("color", "yellow");
+        var rand = Math.floor(Math.random()*16777215).toString(16);
+        $(this).css("color", '#' + rand);
     }, function() {//mouse out
         $(this).css("color", "white");
     }
