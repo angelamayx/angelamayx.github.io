@@ -1,0 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+
+html, body {
+    font-family: 'Josefin Slab', 'HelveticaNeue', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
