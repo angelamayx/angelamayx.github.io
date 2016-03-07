@@ -6,14 +6,24 @@ jq.onload = procede;
 
 function procede() {
 
-
-$(".hovertitle").hover(
-    function() {//mouse in
-        var rand = Math.floor(Math.random()*16777215).toString(16);
-        $(this).css("color", '#' + rand);
-    }, function() {//mouse out
-        $(this).css("color", "white");
-    }
-);
+    $(".hovertitle").hover(
+        function() {//mouse in
+            colorChange(this);
+        }, function() {//mouse out
+            $(this).css("color", "white");
+        }
+    );
 
 }
+
+function colorChange(element) {
+    if(!$(element).is(":hover")) {
+        $(this).css("color","white");
+    } else {
+        var rand = Math.floor(Math.random()*16777215).toString(16);
+        $(element).css("color", '#' + rand);
+
+        setTimeout(function(){ colorChange(element);}, 1000);
+    }
+}
+
