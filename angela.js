@@ -23,7 +23,16 @@ function colorChange(element) {
         var rand = Math.floor(Math.random()*16777215).toString(16);
         $(element).css("color", '#' + rand);
 
-        setTimeout(function(){ colorChange(element);}, 1500);
+        setTimeout(function(){ colorChange(element);}, 1000);
     }
 }
 
+function showMenu() {
+    //have a list of all menu elements
+    //determine which item is already listed
+    //append items
+}
+
+function hideMenu() {
+    //hide/remove appended items
+}

@@ -3,4 +3,5 @@ TO LIST
 - made a content class
 - make about me
 - menu animation
+    - figure out how to make menu overlay content
 - make project list
