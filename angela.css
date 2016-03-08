@@ -10,3 +10,10 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     color: white;
 }
+
+.menu {
+    float: left;
+    min-width: 200px;
+    max-width: 33%;
+}
+

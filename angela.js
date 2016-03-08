@@ -23,7 +23,7 @@ function colorChange(element) {
         var rand = Math.floor(Math.random()*16777215).toString(16);
         $(element).css("color", '#' + rand);
 
-        setTimeout(function(){ colorChange(element);}, 1000);
+        setTimeout(function(){ colorChange(element);}, 1500);
     }
 }
 
