@@ -21,6 +21,19 @@ h1 {
     max-width: 33%;
 }
 
+.menu ul {
+    padding-left: 15px;
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
 .content {
     /*TODO*/
+    min-width: 75%;
+    max-width: 1000px;
+    position: absolute;
+    top: 75px;
+    left: 25px;
 }

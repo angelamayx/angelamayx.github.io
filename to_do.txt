@@ -1,9 +1,7 @@
 TO LIST
-- make a menu class
 - made a content class
 - make about me
 - menu animation
     - figure out how to make menu overlay content
 - make project list
 - 404 page not found
-- style capital titles
