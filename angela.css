@@ -11,6 +11,10 @@ a:link, a:visited, a:hover, a:active {
     color: white;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 .menu {
     float: left;
     min-width: 200px;
