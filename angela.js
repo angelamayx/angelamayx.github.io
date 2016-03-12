@@ -15,6 +15,17 @@ function procede() {
     );
     
     hoverlessColorChange($('#404'));
+
+    $(".hoverlink").each(function() {
+        $(this).css( "color", '#' + Math.floor(Math.random()*16777215).toString(16) );
+    });
+
+    $(".hoverlink").hover(
+        function() {
+            console.log("hovered");
+            //colorchange
+        }, null
+    );
 }
 
 function hoverColorChange(element) {

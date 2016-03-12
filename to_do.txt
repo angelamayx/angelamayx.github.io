@@ -1,4 +1,5 @@
 TO LIST
+- style links better
 - made a content class
 - make about me
 - menu animation
