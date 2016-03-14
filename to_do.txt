@@ -1,8 +1,7 @@
 TO LIST
-- style links better
 - made a content class
-- make about me
+- work on about me
 - menu animation
     - figure out how to make menu overlay content
-- make project list
-- 404 page not found
+- work on project list
+- work on 404 page not found

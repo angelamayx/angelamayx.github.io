@@ -8,7 +8,7 @@ function procede() {
 
     $(".hovertitle").hover(
         function() {//mouse in
-            hoverColorChange(this);
+            hoverTitleColorChange(this);
         }, function() {//mouse out
             $(this).css("color", "white");
         }
@@ -23,9 +23,11 @@ function procede() {
 
     $(".hoverlink").hover(
         function() {
-            console.log("hovered");
+            hoverLinkColorChange(this);
             //colorchange
-        }, null
+        }, function() {
+            return 0;
+        }
     );
 }
 
@@ -36,13 +38,20 @@ function getRandomColor() {
     return '#' + r + g + b;
 }
 
-function hoverColorChange(element) {
+function hoverTitleColorChange(element) {
     if(!$(element).is(":hover")) {
         $(this).css("color","white");
     } else {
         $(element).css("color", getRandomColor());
 
-        setTimeout(function(){ hoverColorChange(element);}, 1000);
+        setTimeout(function(){ hoverTitleColorChange(element);}, 1000);
+    }
+}
+
+function hoverLinkColorChange(element) {
+    if( $(element).is(":hover")) {
+        $(element).css("color", getRandomColor());
+        setTimeout(function(){ hoverLinkColorChange(element);}, 750);
     }
 }
 
