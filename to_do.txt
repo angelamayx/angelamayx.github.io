@@ -1,4 +1,5 @@
 TO LIST
+- general code clean up
 - made a content class
 - work on about me
 - menu animation

@@ -17,8 +17,7 @@ function procede() {
     hoverlessColorChange($('#404'));
 
     $(".hoverlink").each(function() {
-        //$(this).css( "color", '#' + Math.floor(Math.random()*16777215).toString(16) );
-        $(this).css("color", getRandomColor());
+        changeToRandomColor(this);
     });
 
     $(".hoverlink").hover(
@@ -31,32 +30,32 @@ function procede() {
     );
 }
 
-function getRandomColor() {
+function changeToRandomColor(element) {
     var r = (Math.floor((Math.random()*156)+100).toString(16));
     var g = (Math.floor((Math.random()*156)+100).toString(16));
     var b = (Math.floor((Math.random()*156)+100).toString(16));
-    return '#' + r + g + b;
+    
+    $(element).css("color", '#' + r + g + b);
 }
 
 function hoverTitleColorChange(element) {
     if(!$(element).is(":hover")) {
         $(this).css("color","white");
     } else {
-        $(element).css("color", getRandomColor());
-
+        changeToRandomColor(element);
         setTimeout(function(){ hoverTitleColorChange(element);}, 1000);
     }
 }
 
 function hoverLinkColorChange(element) {
     if( $(element).is(":hover")) {
-        $(element).css("color", getRandomColor());
+        changeToRandomColor(element);
         setTimeout(function(){ hoverLinkColorChange(element);}, 750);
     }
 }
 
 function hoverlessColorChange(element) {
-    $(element).css("color", getRandomColor());
+    changeToRandomColor(element);
     setTimeout(function(){ hoverlessColorChange(element);}, 1000);    
 }
 
