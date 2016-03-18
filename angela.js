@@ -2,6 +2,10 @@ var jq = document.createElement('script');
 jq.src = "https://code.jquery.com/jquery-2.2.1.min.js";
 document.querySelector('head').appendChild(jq);
 
+var menuItems = [$( "<li><a href="about.html"><h1 class="hovertitle">about me</h1></a></li>"),
+            $( "<li><h1 class="hovertitle">projects</h1></li>"),
+            $( "<li><a href="resume.pdf"><h1 class="hovertitle">resume</h1></a></li>") ];
+
 jq.onload = procede;
 
 function procede() {
@@ -26,6 +30,14 @@ function procede() {
             //colorchange
         }, function() {
             return 0;
+        }
+    );
+
+    $(".menu").hover(
+        function() {
+            //showMenu()
+        }, function() {
+            //hideMenu()
         }
     );
 }
@@ -60,11 +72,16 @@ function hoverlessColorChange(element) {
 }
 
 function showMenu() {
-    //have a list of all menu elements
-    //determine which item is already listed
-    //append items
+    //determine which item is already listed based on id
+    //copy list
+    //remove index == id of list copy
+
+    //append rest of the list to ul (menu, get first child)
 }
 
 function hideMenu() {
-    //hide/remove appended items
+    //remove appended items
+
+    //find menu list length
+    //remove (length - 1) items
 }
