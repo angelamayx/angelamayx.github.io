@@ -2,9 +2,10 @@ var jq = document.createElement('script');
 jq.src = "https://code.jquery.com/jquery-2.2.1.min.js";
 document.querySelector('head').appendChild(jq);
 
-var menuItems = [$( "<li><a href="about.html"><h1 class="hovertitle">about me</h1></a></li>"),
-            $( "<li><h1 class="hovertitle">projects</h1></li>"),
-            $( "<li><a href="resume.pdf"><h1 class="hovertitle">resume</h1></a></li>") ];
+var menuItems = new Array();
+menuItems[0] = ["about me", "about.html"];
+menuItems[1] = ["projects", "projects.html"];
+menuItems[2] = ["resume", "resume.pdf"];
 
 jq.onload = procede;
 
@@ -35,9 +36,9 @@ function procede() {
 
     $(".menu").hover(
         function() {
-            //showMenu()
+            showMenu($(this));
         }, function() {
-            //hideMenu()
+            hideMenu($(this));
         }
     );
 }
@@ -71,15 +72,22 @@ function hoverlessColorChange(element) {
     setTimeout(function(){ hoverlessColorChange(element);}, 1000);    
 }
 
-function showMenu() {
+function showMenu(element) {
     //determine which item is already listed based on id
+    /*console.log($(element).attr('id'));*/
+    i = $(element).attr('id');
     //copy list
     //remove index == id of list copy
+    /*console.log(menuItems);*/
+    var temp = menuItems.slice(0);
+    temp.splice(i, 1);
 
+    /*console.log(temp);
+    console.log(menuItems);*/
     //append rest of the list to ul (menu, get first child)
 }
 
-function hideMenu() {
+function hideMenu(element) {
     //remove appended items
 
     //find menu list length
