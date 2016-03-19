@@ -19,6 +19,7 @@ h1 {
     float: left;
     min-width: 200px;
     max-width: 33%;
+    background-color: #000000;
 }
 
 .menu ul {
@@ -30,11 +31,11 @@ h1 {
 }
 
 .content {
-    /*TODO*/
     min-width: 75%;
     max-width: 800px;
     padding-right: 50px;
     position: absolute;
     top: 75px;
     left: 25px;
+    z-index: -1;
 }

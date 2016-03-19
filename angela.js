@@ -34,11 +34,11 @@ function procede() {
         }
     );
 
-    $(".menu").hover(
+    $(".pagemenu").hover(
         function() {
-            showMenu($(this));
+            showMenu();
         }, function() {
-            hideMenu($(this));
+            hideMenu();
         }
     );
 }
@@ -72,24 +72,42 @@ function hoverlessColorChange(element) {
     setTimeout(function(){ hoverlessColorChange(element);}, 1000);    
 }
 
-function showMenu(element) {
+function showMenu() {
     //determine which item is already listed based on id
-    /*console.log($(element).attr('id'));*/
-    i = $(element).attr('id');
+    var i = $(".pagemenu").attr('id');
+
     //copy list
     //remove index == id of list copy
-    /*console.log(menuItems);*/
+    //console.log(menuItems);
     var temp = menuItems.slice(0);
     temp.splice(i, 1);
 
-    /*console.log(temp);
-    console.log(menuItems);*/
-    //append rest of the list to ul (menu, get first child)
+    //console.log(temp);
+    //console.log(menuItems);
+    //append rest of the list to ul
+    for (var k = 0; k < temp.length; k++){
+        var item = "<li><a href=\"" + temp[k][1] + "\"><h1>" + temp[k][0] + "</h1></a></li>";
+        $(".menu ul").append(item);
+
+    }
+    $(".menu ul li a h1").addClass("hovertitle");
+
+    //XXX this is hacky
+    $(".hovertitle").hover(
+        function() {//mouse in
+            hoverTitleColorChange(this);
+        }, function() {//mouse out
+            $(this).css("color", "white");
+        }
+    );
 }
 
-function hideMenu(element) {
+function hideMenu() {
     //remove appended items
 
     //find menu list length
     //remove (length - 1) items
+    for (var k = 0; k < menuItems.length - 1; k++){
+        $('.menu ul li').last().remove();
+    }
 }

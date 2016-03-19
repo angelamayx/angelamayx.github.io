@@ -1,8 +1,7 @@
 TO LIST
 - general code clean up
+    - clean up hovertitle hover
 - work on about me
-- menu animation
-    - figure out how to make menu overlay content
 - work on project list
 - work on 404 page not found
 - make site mobile responsive
