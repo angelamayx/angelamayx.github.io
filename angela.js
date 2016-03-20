@@ -78,12 +78,9 @@ function showMenu() {
 
     //copy list
     //remove index == id of list copy
-    //console.log(menuItems);
     var temp = menuItems.slice(0);
     temp.splice(i, 1);
 
-    //console.log(temp);
-    //console.log(menuItems);
     //append rest of the list to ul
     for (var k = 0; k < temp.length; k++){
         var item = "<li><a href=\"" + temp[k][1] + "\"><h1>" + temp[k][0] + "</h1></a></li>";
