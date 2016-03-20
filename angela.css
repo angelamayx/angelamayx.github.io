@@ -39,3 +39,7 @@ h1 {
     left: 50px;
     z-index: -1;
 }
+
+p {
+    text-align: justify;
+}

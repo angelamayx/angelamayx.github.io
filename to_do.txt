@@ -1,6 +1,7 @@
 TO LIST
 - general code clean up
-    - clean up hovertitle hover
+    - automatic generate menu items
+    - automatic generate page title
 - work on about me
 - work on project list
 - work on 404 page not found
