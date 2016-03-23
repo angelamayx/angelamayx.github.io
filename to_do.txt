@@ -4,9 +4,6 @@ TO LIST
     - automatic generate page title
 - work on about me
 - work on project list
-    - style project table
-        - bigger margins
-        - set column width
     - add projects
 - work on 404 page not found
 - make site mobile responsive

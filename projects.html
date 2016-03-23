@@ -6,6 +6,28 @@
         <link rel="icon" type="img/ico" href="favicon.ico">
         <script src="angela.js"></script>
     </head>
+<style>
+    table {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    td {
+        padding: 10px;
+        padding-top: 0;
+        vertical-align: top;
+        text-align: justify;
+    }
+
+    td:first-child {
+        width: 30%;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+</style>
 <body>
     <div class="menu pagemenu" id="1">
         <ul>
@@ -14,28 +36,76 @@
     </div>
 
     <div class="content">
+        <!--<p>WORK IN PROGRESS!</p>-->
         <p>
-            WORK IN PROGRESS!
+            Projects will be sorted by type and purpose, then in reverse
+            chronological order. This is currently under construction.
+        </p>
+        <!--put things to skip to sections-->
+        <br>
+        <h2>School Projects</h2>
+        <p>
+            These were projects I did for classes while attending the 
+            University of Texas at Austin.
         </p>
 
-        <table style="width:100%">
+        <h3>
+            CS378H: Distributed Computing and Systems Honors, Spring 2016
+        </h3>
+        <table>
             <tr>
-                <td>Making a website!</td>
+                <td>Snapshot Protocol</td>
                 <td>
-                    Used HTML, CSS, and JQuery to build a fun personal 
-                    website!
+                    Programming partner and I implemented a snapshot 
+                    protocol based on "Efficient Distributed Snapshots"
+                    by Spezialetti and Kearns. We were able to create
+                    consistent global snapshots of an asynchronous system
+                    with any reason number of master nodes and a FIFO
+                    message delivery system. Our project was written in 
+                    Java and made use of Java's networking and concurrency
+                    libraries.
+                </td>
+            </tr>
+        </table>
+
+        <h3>
+            CS378H: Computer Vision and Machine Learning Honors, Fall 2015
+        </h3>
+        <table>
+            <tr>
+                <td>Sliding Window Face Detector</td>
+                <td>
+                    TODO
                 </td>
             </tr>
             <tr>
-                <td>Another entry</td>
-                <td>testing out how tables work, ya feel</td>
+                <td>Image Recognition Search</td>
+                <td>
+                    TODO
+                </td>
             </tr>
             <tr>
-                <td>really long paragraph</td>
+                <td>Image Stitching - Panoramas</td>
                 <td>
-                    what if i made a really long paragraph that bleeds 
-                    over to the next row??? what happens then?? how do 
-                    things space out???
+                    TODO
+                </td>
+            </tr>
+            <tr>
+                <td>Color Quantizer</td>
+                <td>
+                    TODO
+                </td>
+            </tr>
+            <tr>
+                <td>Hough Space Circle Detector</td>
+                <td>
+                    TODO
+                </td>
+            </tr>
+            <tr>
+                <td>Seam Carving Content-Aware Image Shrinker</td>
+                <td>
+                    TODO
                 </td>
             </tr>
         </table>
