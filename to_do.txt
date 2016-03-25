@@ -5,6 +5,5 @@ TO LIST
 - work on about me
 - work on project list
     - add projects
-    - add example pictures for image stitching
 - work on 404 page not found
 - make site mobile responsive
