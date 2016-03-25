@@ -114,37 +114,82 @@
             <tr>
                 <td>Sliding Window Face Detector</td>
                 <td>
-                    TODO
+                    Given an image, this program will detect the faces
+                    present in it. The system was 
+                    first trained on both positive features (6,713 
+                    images of faces) and negative features (20k images 
+                    of things that were not faces). Every image in each 
+                    features set was converted to a <a href="https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients"
+                    class="hoverlink" target="_blank">HoG</a> map. The
+                    sets of HoG maps were used train a <a href="https://en.wikipedia.org/wiki/Support_vector_machine"
+                    class="hoverlink" target="_blank">support vector
+                    machine (SVM)</a>. After converting an image to a 
+                    HoG map, the program uses sliding windows at
+                    different scales, checking the content inside the
+                    window with the SVM. If a face seems to be detected,
+                    a vote will be casted for that window. After running
+                    the sliding window, the program will use non-maximum
+                    suppression to decide the best centers for each 
+                    detected face.
                 </td>
             </tr>
             <tr>
                 <td>Image Recognition Search</td>
                 <td>
-                    TODO
+                    This program creates a <a href="https://en.wikipedia.org/wiki/Bag-of-words_model"
+                    class="hoverlink" target="_blank">bag of words</a>
+                    "visual vocabulary" by running a <a
+                    class="hoverlink" href="https://en.wikipedia.org/wiki/K-means_clustering"
+                    target="_blank">k-means</a>
+                    algorithm over <a class="hoverlink"
+                    href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform" target="_blank">
+                    SIFT descriptors</a> various frames of a video. The
+                    program has methods to search for frames that
+                    are visually similar to a query frame and to search
+                    for other occurences of an object within the rest
+                    of the video.
                 </td>
             </tr>
             <tr>
                 <td>Image Stitching - Panoramas</td>
                 <td>
-                    TODO
+                    Using corresponding <a class="hoverlink"
+                    href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform" target="_blank">
+                    SIFT descriptors</a> to calculate <a
+                    class="hoverlink" target="_blank"
+                    href="https://en.wikipedia.org/wiki/Affine_transformation">
+                    affine transformations</a>, this program stitches
+                    together two images to form one continuous image.
                 </td>
             </tr>
             <tr>
                 <td>Color Quantizer</td>
                 <td>
-                    TODO
+                    Given an image and a number, this program quantized
+                    the colors of an image based on either RGB or HSV
+                    values. Quantization was done using a <a
+                    class="hoverlink" href="https://en.wikipedia.org/wiki/K-means_clustering"
+                    target="_blank">k-means</a>
+                    algorithm.
                 </td>
             </tr>
             <tr>
                 <td>Hough Space Circle Detector</td>
                 <td>
-                    TODO
+                    I implemented a program that detected circles of a 
+                    given pixel radius in a given image using a <a
+                    class="hoverlink" target="_blank"
+                    href="https://en.wikipedia.org/wiki/Hough_transform">
+                    Hough transform</a> voting space.
                 </td>
             </tr>
             <tr>
                 <td>Seam Carving Content-Aware Image Shrinker</td>
                 <td>
-                    TODO
+                    I implemented the image-shrinking algorithm described
+                    in <a class="hoverlink" href="http://graphics.cs.cmu.edu/courses/15-463/2007_fall/hw/proj2/imret.pdf"
+                    target="_blank">"Seam Carving for Content-Aware 
+                    Image Resizing" by Avidan and Shamir</a>.
                 </td>
             </tr>
         </table>
