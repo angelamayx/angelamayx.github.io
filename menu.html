@@ -8,15 +8,18 @@
     </head>
 <body>
     <div class="menu">
-        <!--<h2>ANGELA MAY XIE</h2>-->
-        <ul>
-            <li><a href="about.html"><h1 class="hovertitle">about me</h1></a></li>
-            <li><a href="projects.html"><h1 class="hovertitle">projects</h1></a></li>
-            <li><a href="resume.pdf"><h1 class="hovertitle">resume</h1></a></li>
-        </ul>
+        <ul></ul>
     </div>
-<!--about me, resume -->
 
 </body>
+<script>
+    function pageFunction() {
+            for (var k = 0; k < menuItems.length; k++){
+            var item = "<li><a href=\"" + menuItems[k][1] + "\"><h1>" + menuItems[k][0] + "</h1></a></li>";
+            $(".menu ul").append(item);
 
+        }
+        $(".menu ul li a h1").addClass("hovertitle");
+    }
+</script>
 </html>

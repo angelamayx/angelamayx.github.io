@@ -10,6 +10,7 @@ menuItems[2] = ["resume", "resume.pdf"];
 jq.onload = procede;
 
 function procede() {
+	pageFunction();
 
     $(".hovertitle").hover(
         function() {//mouse in
@@ -108,3 +109,5 @@ function hideMenu() {
         $('.menu ul li').last().remove();
     }
 }
+
+function pageFunction() {}
