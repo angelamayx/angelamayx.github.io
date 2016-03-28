@@ -73,6 +73,10 @@ function hoverlessColorChange(element) {
     setTimeout(function(){ hoverlessColorChange(element);}, 1000);    
 }
 
+function formatMenuItem(array, index) {
+	return "<li><a href=\"" + array[index][1] + "\"><h1>" + array[index][0] + "</h1></a></li>";
+}
+
 function showMenu() {
     //determine which item is already listed based on id
     var i = $(".pagemenu").attr('id');
@@ -84,7 +88,7 @@ function showMenu() {
 
     //append rest of the list to ul
     for (var k = 0; k < temp.length; k++){
-        var item = "<li><a href=\"" + temp[k][1] + "\"><h1>" + temp[k][0] + "</h1></a></li>";
+        var item = formatMenuItem(temp, k);
         $(".menu ul").append(item);
 
     }

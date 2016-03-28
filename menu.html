@@ -15,7 +15,7 @@
 <script>
     function pageFunction() {
             for (var k = 0; k < menuItems.length; k++){
-            var item = "<li><a href=\"" + menuItems[k][1] + "\"><h1>" + menuItems[k][0] + "</h1></a></li>";
+            var item = formatMenuItem(menuItems, k);
             $(".menu ul").append(item);
 
         }
