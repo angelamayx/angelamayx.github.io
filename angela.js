@@ -20,7 +20,7 @@ function procede() {
         }
     );
     
-    hoverlessColorChange($('#404'));
+    hoverlessColorChange($('#404')); //XXX move to page function of 404 page
 
     $(".hoverlink").each(function() {
         changeToRandomColor(this);
@@ -75,6 +75,17 @@ function hoverlessColorChange(element) {
 
 function formatMenuItem(array, index) {
 	return "<li><a href=\"" + array[index][1] + "\"><h1>" + array[index][0] + "</h1></a></li>";
+}
+
+function formatHeader(array, index) {
+    return "<li><h1>" + array[index][0] + "</h1></li>";
+}
+
+function generateHeader() {
+    var i = $(".pagemenu").attr('id');
+    $(".menu").append("<ul></ul>");
+    var item = formatHeader(menuItems, i);
+    $(".menu ul").append(item);
 }
 
 function showMenu() {

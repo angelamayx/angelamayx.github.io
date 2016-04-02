@@ -1,7 +1,5 @@
 TO LIST
 - general code clean up
-    - automatic generate page title
-    - function to format menu items
 - work on about me
 - work on project list
     - add projects
