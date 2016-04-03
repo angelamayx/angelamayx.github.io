@@ -19,8 +19,6 @@ function procede() {
             $(this).css("color", "white");
         }
     );
-    
-    hoverlessColorChange($('#404')); //XXX move to page function of 404 page
 
     $(".hoverlink").each(function() {
         changeToRandomColor(this);
@@ -64,7 +62,7 @@ function hoverTitleColorChange(element) {
 function hoverLinkColorChange(element) {
     if( $(element).is(":hover")) {
         changeToRandomColor(element);
-        setTimeout(function(){ hoverLinkColorChange(element);}, 750);
+        setTimeout(function(){ hoverLinkColorChange(element);}, 1000);
     }
 }
 
