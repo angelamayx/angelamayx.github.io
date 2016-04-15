@@ -142,6 +142,14 @@
             CS378H: Distributed Computing and Systems Honors, Spring 2016
         </h3>
         <table>
+        	<tr>
+        		<td>Paxos Chatroom</td>
+        		<td>
+        			Programming partner and I implemented a "chatroom" 
+        			with clients that send messages to each other 
+					through servers. ___WRITE MORE____
+        		</td>
+        	</tr>
             <tr>
                 <td>Snapshot Protocol</td>
                 <td>
@@ -317,11 +325,24 @@
             </tr>
             <tr>
                 <td>Preemptive Multithreading</td>
-                <td></td>
+                <td>
+                	I implemented preemptive multithreadings, where 
+                	threads were interrupted after a certain number of 
+                	clock ticks and forced to yield to other threads. 
+                	Each thread was created using heap memory so a 
+                	reaper thread existed to free threads that had 
+                	exited.
+                </td>
             </tr>
             <tr>
                 <td>Cooperative Multithreading</td>
-                <td></td>
+                <td>
+                	I implemented cooperative multithreading, where 
+                	threads allow other threads to make progress by 
+                	yielding to each other. Each thread had its own 
+                	stack space. When a thread yielded, I made sure its 
+                	registers were saved so they could be restored when the thread became active again.
+                </td>
             </tr>
         </table>
 
