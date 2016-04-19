@@ -147,7 +147,19 @@
         		<td>
         			Programming partner and I implemented a "chatroom" 
         			with clients that send messages to each other 
-					through servers. ___WRITE MORE____
+					through servers. The servers and clients exist in an 
+					asynchronous system so the servers decide the 
+					ordering of messages based on a <a class="hoverlink" 
+					target="_blank"
+					href="https://en.wikipedia.org/wiki/
+					Paxos_(computer_science)">Paxos</a> protocol. In 
+					order to get the chatroom fully working, we also 
+					needed to implement failure detection and leader 
+					election. We used <a class="hoverlink"
+					target="_blank"
+					href="https://en.wikipedia.org/wiki/Heartbeat_(computing)">
+					heartbeats</a> determine leader failures and used 
+					round robin leader election.
         		</td>
         	</tr>
             <tr>
