@@ -6,6 +6,7 @@ var menuItems = new Array();
 menuItems[0] = ["about me", "about.html"];
 menuItems[1] = ["projects", "projects.html"];
 menuItems[2] = ["resume", "resume.pdf"];
+menuItems[3] = ["publications", "#"];
 
 jq.onload = procede;
 
